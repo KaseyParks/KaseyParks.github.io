@@ -4,71 +4,77 @@ body {
   background: linear-gradient(to bottom, #e0f7fa, #ffffff);
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 /* Container box for the content */
 .container {
-  max-width: 500px;
   width: 90%;
-  background: #ffffff;
-  padding: 40px;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 40px 20px; /* Slightly smaller padding for mobile */
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* Headings */
 h1 {
-  color: #333;
+  color: #333333;
   margin-bottom: 10px;
+  font-size: 2em;
 }
 
 /* Subtext / tagline */
 .tagline {
-  color: #555;
+  color: #555555;
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  line-height: 1.4;
 }
 
 /* Email input */
 input[type="email"] {
-  padding: 10px;
+  padding: 12px;
   width: 80%;
   margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 /* Subscribe button */
 button {
-  padding: 10px 20px;
-  background: #4CAF50;
+  padding: 12px 25px;
+  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background: #45a049;
+  background-color: #45a049;
 }
 
 /* Success message text */
 .success-message {
   color: green;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 /* Footer styling */
 footer {
   margin-top: 30px;
-  color: #777;
+  color: #777777;
   font-size: 14px;
 }
 
