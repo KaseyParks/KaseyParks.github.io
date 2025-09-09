@@ -1,7 +1,27 @@
-<div style="border: 2px dashed #4CAF50; padding: 20px; border-radius: 10px; background-color: #f9fff9; text-align: center;">
-  <h2 style="color: #333;">🎮 Welcome to My Game Project!</h2>
-  <p style="color: #555; font-size: 16px;">
-    This project includes a mini website, email subscription system, and automated updates.
-  </p>
-  <p style="color: #777; font-size: 14px;>"Hi"</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Updates</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 Welcome!</h1>
+    <p class="tagline">Subscribe to get updates. This email is automated; if you reply, a human will respond.</p>
+
+    <form id="subscribe-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+      <p class="success-message" id="success-message"></p>
+    </form>
+
+    <footer>
+      <p>© 2025 Game Updates. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
