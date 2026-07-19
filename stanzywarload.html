@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stanzy Warload - Dev Blog & News</title>
+    <title>Sol System News Network</title>
     <style>
         * {
             margin: 0;
@@ -54,8 +54,9 @@
         }
         .site-header p {
             font-size: 1rem;
-            color: #888888;
+            color: #ff3333;
             margin-top: 5px;
+            font-weight: bold;
         }
 
         /* News Layout */
@@ -126,8 +127,8 @@
 
         <!-- News Header -->
         <header class="site-header">
-            <h1>Stanzy Warload News</h1>
-            <p>Official development updates, lore summaries, and universe changes.</p>
+            <h1>Sol System News Network</h1>
+            <p>CRITICAL UPDATES: USG QUARANTINE STATUS & INTERSTELLAR REPORTS</p>
         </header>
 
         <!-- News Articles -->
@@ -146,18 +147,19 @@
         // ==========================================
         const newsArticles = [
             {
-                date: "July 18, 2026",
-                title: "Sol System Conflict Overview",
+                date: "October 14, 2134",
+                title: "Sol System Placed Under Absolute Lockdown Following Mars Destruction",
                 paragraphs: [
-                    "The story started back around 2134 when the Starship launched for its 35th flight. A project known as Hue was signed between the USG and the USA, which eventually led to a superweapon deployment on Mars.",
-                    "With Mars completely devastated and losing its atmosphere, panic has completely shut down the SpaceFlight Program. Citizens trying to escape Earth have locked down the Sol system entirely due to ongoing conflict, leaving players to figure out how to restore universal peace."
+                    "The United Space Governance (USG) has declared an immediate, system-wide lockdown across Sol. The containment protocol follows the catastrophic destruction of Mars, which has completely lost its atmosphere after the deployment of the 'Hue' project superweapon.",
+                    "Public panic is rising as citizens accuse the USG of attempting to suppress data collected by the weapon's planetary laser systems. In response to the growing chaos and reports of retaliation threats against the Sun, the SpaceFlight Program has been officially cancelled indefinitely."
                 ]
             },
             {
-                date: "June 20, 2026",
-                title: "Game Architecture Decisions",
+                date: "August 2, 2134",
+                title: "USG and USA Finalize Secret 'Hue' Agreement",
                 paragraphs: [
-                    "We are building out the scale of the universe. To keep things running smoothly without major performance drops, the core game mechanics are being structured to handle massive player presence and fluid planet-to-space transitions."
+                    "Documents leaked today confirm the United Space Governance has officially signed a collaborative contract with the United States of America under the codename Project Hue.",
+                    "While details remain classified, the operation is heavily tied to the upcoming 35th launch of the flagship Starship array. Independent planetary analysts warn that the project involves deep-space energy tracking grids centered around the Mars sector."
                 ]
             }
         ];
@@ -186,7 +188,6 @@
             
             feedContainer.appendChild(articleElement);
 
-            // Add a clean visual dividing line between posts, except for the last one
             if (index < newsArticles.length - 1) {
                 const hr = document.createElement('hr');
                 hr.style.border = 'none';
