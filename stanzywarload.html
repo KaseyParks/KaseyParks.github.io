@@ -3,170 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stanzy Warload // KaseyParks</title>
+    <title>STANZY WARLOAD // LOGS</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Courier New', Courier, monospace; /* Switched to mono for a more tactical feel */
-            /* REMOVED CORNER RADIUS GLOBALLY */
-            border-radius: 0 !important; 
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 0 !important;
         }
 
         body {
-            /* Applied background image link */
             background-color: #000000;
             background-image: url('https://wallpapercave.com/wp/0Xf6Hpa.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             padding: 20px;
         }
 
-        .container {
-            width: 100%;
-            max-width: 900px;
-            /* Switched to solid background with border, no blur, zero radius */
+        .layout-grid {
+            max-width: 1000px;
+            margin: 0 auto;
             background: #000000;
-            border: 2px solid #ffffff; 
-            overflow: hidden;
+            border: 2px solid #ffffff;
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
         }
 
-        /* Banner Area */
-        .banner-wrapper {
+        /* Banner Container */
+        .banner-container {
             width: 100%;
-            position: relative;
-            background: #111111;
-            /* Placeholder before banner loads */
-            aspect-ratio: 15 / 4; 
-            overflow: hidden;
             border-bottom: 2px solid #ffffff;
+            overflow: hidden;
         }
-
         .banner-img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
             display: block;
+            object-fit: cover;
         }
 
-        /* Content Layout */
-        .content {
+        /* Tactical Header Block */
+        .site-header {
+            padding: 20px 40px;
+            border-bottom: 2px solid #ffffff;
+            background: #0a0a0a;
+        }
+        .site-header h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .site-header .ticker {
+            font-size: 0.85rem;
+            color: #ff3333;
+            margin-top: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Main Content Feed */
+        .news-feed {
             padding: 40px;
         }
 
-        .header-section {
+        .news-item {
+            border: 1px solid #ffffff;
+            background: #0a0a0a;
             margin-bottom: 30px;
+            padding: 25px;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: #ffffff;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            font-size: 1rem;
+        .news-meta {
+            font-size: 0.85rem;
             color: #aaaaaa;
-            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #444444;
+            padding-bottom: 5px;
         }
 
-        .divider {
-            height: 2px;
-            background: #ffffff;
-            margin: 30px 0;
-        }
-
-        /* Update Section */
-        .section-title {
+        .news-title {
             font-size: 1.4rem;
             font-weight: bold;
-            color: #ffffff;
-            margin-bottom: 20px;
             text-transform: uppercase;
-        }
-
-        .update-box {
-            background: #111111;
-            border: 1px solid #aaaaaa;
-            padding: 24px;
-        }
-
-        .update-box h3 {
-            font-size: 1.2rem;
-            color: #ffffff;
             margin-bottom: 15px;
-            text-decoration: underline;
+            color: #ffffff;
         }
 
-        .update-box p {
-            font-size: 1rem;
-            color: #ffffff;
+        .news-content p {
+            font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 15px;
+            color: #dddddd;
+        }
+        .news-content p:last-child {
+            margin-bottom: 0;
         }
 
-        /* Back to portfolio link */
-        .back-link {
+        /* Return Link */
+        .nav-footer {
+            padding: 0 40px 40px 40px;
+        }
+        .back-btn {
             display: inline-block;
-            margin-top: 30px;
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
             border: 1px solid #ffffff;
             padding: 10px 20px;
-            transition: background 0.2s ease;
         }
-
-        .back-link:hover {
+        .back-btn:hover {
             background: #ffffff;
             color: #000000;
         }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .content { padding: 20px; }
+        @media (max-width: 700px) {
+            .site-header, .news-feed, .nav-footer { padding: 20px; }
+            .site-header h1 { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Banner Container: Using your requested Google User Content link -->
-        <div class="banner-wrapper">
+    <div class="layout-grid">
+        <!-- Main Banner -->
+        <div class="banner-container">
             <img src="https://lens.usercontent.google.com/image?vsrid=CL6SqfGw39jURRACGAEiJDM5NDY2Zjg2LTc1OGYtNGVhMi04OGE2LTJiZjZiMzQ3NzY1NTKBASICZ2goB0JzCi5sZmUtZHVtbXk6YzQzOGM2ZmItMWJjZC00YzY4LWE4OWMtYzFlZDE2MmIzOWUyEkEKPy9ibnMvZ2gvYm9yZy9naC9ibnMvbGVucy1mcm9udGVuZC1hcGkvcHJvZC5sZW5zLWZyb250ZW5kLWFwaS82N1oECgJnaDjHpqfYw92VAw&gsessionid=99jokZNr6ebYs2EuKb8uUAkE6W58sQiVMPMJLmMOjjXafb0rm06yvA" alt="Stanzy Warload Banner" class="banner-img">
         </div>
 
-        <div class="content">
-            <div class="header-section">
-                <h1>Stanzy Warload</h1>
-                <p class="subtitle">System Lockout Simulator // United Space Governance Conflict</p>
-            </div>
+        <!-- News Terminal Header -->
+        <header class="site-header">
+            <h1>Stanzy Warload Intel Feed</h1>
+            <div class="ticker">STATUS: SOLAR SYSTEM LOCKDOWN COMPLIANCE // ACTIVE ARCHIVE TRANSMISSIONS</div>
+        </header>
 
-            <div class="divider"></div>
+        <!-- Dynamic News Feed Area -->
+        <main class="news-feed" id="newsFeed">
+            <!-- JavaScript will inject your custom news posts straight into here -->
+        </main>
 
-            <div class="section-title">Deployment Status</div>
-            
-            <div class="update-box">
-                <h3>// LOG_ENTRY_04 // UNIVERSAL_PEACE_JUSTICE //</h3>
-                <p>Development phase active. Current focus: Optimizing Fleet Combat AI and finalizing the Mars Deployment Superweapon logic (100% usage capability).</p>
-                <p>USG compliance protocols are currently bypassed. System stability confirmed. Stand by for future updates.</p>
-            </div>
-
-            <!-- Replace 'index.html' if your main portfolio file is named something else -->
-            <a href="index.html" class="back-link">&lt; RETURN_TO_CORE</a>
-        </div>
+        <footer class="nav-footer">
+            <a href="index.html" class="back-btn">&lt; RETURN TO CORE</a>
+        </footer>
     </div>
 
+    <script>
+        // ==========================================
+        //  DEFINE YOUR NEWSLETTERS HERE
+        //  Just add or edit objects in this array.
+        // ==========================================
+        const newsArticles = [
+            {
+                date: "2097-07-18",
+                title: "USG Agreement Bypassed Near Mars Sector",
+                paragraphs: [
+                    "The United Space Governance has intensified defensive barriers across Sol. Reports indicate the Mars superweapon data tracking arrays remain online despite atmosphere dissipation.",
+                    "Citizens trying to break the quarantine protocol face direct laser alignment grids. Operational groups are mobilizing to counter extreme tactical deployment schemes."
+                ]
+            },
+        ];
+
+        // ==========================================
+        //  ENGINE RENDERING CODE (DO NOT EDIT)
+        // ==========================================
+        const feedContainer = document.getElementById('newsFeed');
+        
+        newsArticles.forEach(article => {
+            const articleElement = document.createElement('article');
+            articleElement.className = 'news-item';
+            
+            let paragraphHTML = '';
+            article.paragraphs.forEach(text => {
+                paragraphHTML += `<p>${text}</p>`;
+            });
+
+            articleElement.innerHTML = `
+                <div class="news-meta">LOG_DATE: ${article.date} // TERMINAL_READOUT</div>
+                <div class="news-title">${article.title}</div>
+                <div class="news-content">
+                    ${paragraphHTML}
+                </div>
+            `;
+            
+            feedContainer.appendChild(articleElement);
+        });
+    </script>
 </body>
 </html>
