@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STANZY WARLOAD // LOGS</title>
+    <title>Stanzy Warload - Dev Blog & News</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: sans-serif;
             border-radius: 0 !important;
         }
 
@@ -24,11 +24,10 @@
         }
 
         .layout-grid {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             background: #000000;
             border: 2px solid #ffffff;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
         }
 
         /* Banner Container */
@@ -43,65 +42,58 @@
             object-fit: cover;
         }
 
-        /* Tactical Header Block */
+        /* Main Site Title */
         .site-header {
-            padding: 20px 40px;
+            padding: 30px 40px;
             border-bottom: 2px solid #ffffff;
             background: #0a0a0a;
         }
         .site-header h1 {
-            font-size: 2.2rem;
-            font-weight: 900;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            font-size: 2.5rem;
+            font-weight: 800;
         }
-        .site-header .ticker {
-            font-size: 0.85rem;
-            color: #ff3333;
+        .site-header p {
+            font-size: 1rem;
+            color: #888888;
             margin-top: 5px;
-            font-weight: bold;
-            letter-spacing: 1px;
         }
 
-        /* Main Content Feed */
+        /* News Layout */
         .news-feed {
             padding: 40px;
         }
 
         .news-item {
-            border: 1px solid #ffffff;
-            background: #0a0a0a;
-            margin-bottom: 30px;
-            padding: 25px;
+            margin-bottom: 50px;
+        }
+        .news-item:last-child {
+            margin-bottom: 0;
         }
 
-        .news-meta {
-            font-size: 0.85rem;
-            color: #aaaaaa;
-            margin-bottom: 10px;
-            border-bottom: 1px dashed #444444;
-            padding-bottom: 5px;
+        .news-date {
+            font-size: 0.9rem;
+            color: #888888;
+            margin-bottom: 8px;
         }
 
         .news-title {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: bold;
-            text-transform: uppercase;
             margin-bottom: 15px;
             color: #ffffff;
         }
 
         .news-content p {
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.6;
             margin-bottom: 15px;
-            color: #dddddd;
+            color: #cccccc;
         }
         .news-content p:last-child {
             margin-bottom: 0;
         }
 
-        /* Return Link */
+        /* Footer Link */
         .nav-footer {
             padding: 0 40px 40px 40px;
         }
@@ -110,7 +102,7 @@
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            border: 1px solid #ffffff;
+            border: 2px solid #ffffff;
             padding: 10px 20px;
         }
         .back-btn:hover {
@@ -120,7 +112,7 @@
 
         @media (max-width: 700px) {
             .site-header, .news-feed, .nav-footer { padding: 20px; }
-            .site-header h1 { font-size: 1.6rem; }
+            .site-header h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -132,44 +124,50 @@
             <img src="https://lens.usercontent.google.com/image?vsrid=CL6SqfGw39jURRACGAEiJDM5NDY2Zjg2LTc1OGYtNGVhMi04OGE2LTJiZjZiMzQ3NzY1NTKBASICZ2goB0JzCi5sZmUtZHVtbXk6YzQzOGM2ZmItMWJjZC00YzY4LWE4OWMtYzFlZDE2MmIzOWUyEkEKPy9ibnMvZ2gvYm9yZy9naC9ibnMvbGVucy1mcm9udGVuZC1hcGkvcHJvZC5sZW5zLWZyb250ZW5kLWFwaS82N1oECgJnaDjHpqfYw92VAw&gsessionid=99jokZNr6ebYs2EuKb8uUAkE6W58sQiVMPMJLmMOjjXafb0rm06yvA" alt="Stanzy Warload Banner" class="banner-img">
         </div>
 
-        <!-- News Terminal Header -->
+        <!-- News Header -->
         <header class="site-header">
-            <h1>Stanzy Warload Intel Feed</h1>
-            <div class="ticker">STATUS: SOLAR SYSTEM LOCKDOWN COMPLIANCE // ACTIVE ARCHIVE TRANSMISSIONS</div>
+            <h1>Stanzy Warload News</h1>
+            <p>Official development updates, lore summaries, and universe changes.</p>
         </header>
 
-        <!-- Dynamic News Feed Area -->
+        <!-- News Articles -->
         <main class="news-feed" id="newsFeed">
-            <!-- JavaScript will inject your custom news posts straight into here -->
+            <!-- JavaScript injects articles here -->
         </main>
 
         <footer class="nav-footer">
-            <a href="index.html" class="back-btn">&lt; RETURN TO CORE</a>
+            <a href="index.html" class="back-btn">Return to Portfolio</a>
         </footer>
     </div>
 
     <script>
         // ==========================================
-        //  DEFINE YOUR NEWSLETTERS HERE
-        //  Just add or edit objects in this array.
+        //  ADD YOUR NEWS POSTS HERE
         // ==========================================
         const newsArticles = [
             {
-                date: "2097-07-18",
-                title: "USG Agreement Bypassed Near Mars Sector",
+                date: "July 18, 2026",
+                title: "Sol System Conflict Overview",
                 paragraphs: [
-                    "The United Space Governance has intensified defensive barriers across Sol. Reports indicate the Mars superweapon data tracking arrays remain online despite atmosphere dissipation.",
-                    "Citizens trying to break the quarantine protocol face direct laser alignment grids. Operational groups are mobilizing to counter extreme tactical deployment schemes."
+                    "The story started back around 2134 when the Starship launched for its 35th flight. A project known as Hue was signed between the USG and the USA, which eventually led to a superweapon deployment on Mars.",
+                    "With Mars completely devastated and losing its atmosphere, panic has completely shut down the SpaceFlight Program. Citizens trying to escape Earth have locked down the Sol system entirely due to ongoing conflict, leaving players to figure out how to restore universal peace."
                 ]
             },
+            {
+                date: "June 20, 2026",
+                title: "Game Architecture Decisions",
+                paragraphs: [
+                    "We are building out the scale of the universe. To keep things running smoothly without major performance drops, the core game mechanics are being structured to handle massive player presence and fluid planet-to-space transitions."
+                ]
+            }
         ];
 
         // ==========================================
-        //  ENGINE RENDERING CODE (DO NOT EDIT)
+        //  RENDER FEED
         // ==========================================
         const feedContainer = document.getElementById('newsFeed');
         
-        newsArticles.forEach(article => {
+        newsArticles.forEach((article, index) => {
             const articleElement = document.createElement('article');
             articleElement.className = 'news-item';
             
@@ -179,7 +177,7 @@
             });
 
             articleElement.innerHTML = `
-                <div class="news-meta">LOG_DATE: ${article.date} // TERMINAL_READOUT</div>
+                <div class="news-date">${article.date}</div>
                 <div class="news-title">${article.title}</div>
                 <div class="news-content">
                     ${paragraphHTML}
@@ -187,6 +185,15 @@
             `;
             
             feedContainer.appendChild(articleElement);
+
+            // Add a clean visual dividing line between posts, except for the last one
+            if (index < newsArticles.length - 1) {
+                const hr = document.createElement('hr');
+                hr.style.border = 'none';
+                hr.style.borderTop = '1px solid #333333';
+                hr.style.margin = '40px 0';
+                feedContainer.appendChild(hr);
+            }
         });
     </script>
 </body>
